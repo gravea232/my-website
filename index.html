@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Optional custom styles */
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 p-5 text-white text-center">
+        <h1 class="text-3xl">Delicious Recipes</h1>
+    </header>
+    
+    <main class="p-5">
+        <section id="recipes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Recipe Cards will be generated here -->
+        </section>
+    </main>
+
+    <footer class="bg-green-600 p-5 text-white text-center">
+        <p>&copy; 2024 Delicious Recipes</p>
+    </footer>
+
+    <script>
+        const recipes = [
+            {
+                title: "Spaghetti Carbonara",
+                ingredients: ["Spaghetti", "Eggs", "Pecorino cheese", "Guanciale", "Black pepper"],
+                instructions: "Cook spaghetti. Fry guanciale. Mix eggs and cheese. Combine all.",
+                image: "https://via.placeholder.com/300"
+            },
+            {
+                title: "Chicken Curry",
+                ingredients: ["Chicken", "Curry powder", "Coconut milk", "Onions", "Garlic"],
+                instructions: "Sauté onions and garlic. Add chicken and curry. Pour in coconut milk.",
+                image: "https://via.placeholder.com/300"
+            },
+            // Add more recipes as needed
+        ];
+
+        const recipeContainer = document.getElementById('recipes');
+
+        recipes.forEach(recipe => {
+            const card = document.createElement('div');
+            card.className = "bg-white rounded-lg shadow-lg p-5";
+
+            card.innerHTML = `
+                <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-48 object-cover rounded-t-lg">
+                <h2 class="text-xl font-bold mt-2">${recipe.title}</h2>
+                <h3 class="text-lg font-semibold">Ingredients:</h3>
+                <ul class="list-disc pl-5">
+                    ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                </ul>
+                <h3 class="text-lg font-semibold mt-2">Instructions:</h3>
+                <p>${recipe.instructions}</p>
+            `;
+
+            recipeContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

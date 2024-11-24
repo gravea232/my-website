@@ -3,107 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My TV Help</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Food Recipe Website</title>
+    <!-- Bootstrap 4 CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
         }
-        /* Custom Styles for smooth transitions */
-        .faq-answer {
-            transition: max-height 0.3s ease-out;
-            overflow: hidden;
-        }0
+        .recipe-card {
+            margin-bottom: 30px;
+        }
+        .recipe-description {
+            color: #555;
+            font-style: italic;
+        }
+        .card-title {
+            color: #007bff;
+        }
+        .footer-text {
+            color: #fff;
+        }
+        .main-content {
+            padding-top: 30px;
+        }
+        .section-title {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-    <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-pink-500 to-teal-500 text-black text-center py-16">
-        <h1 class="text-5xl font-bold mb-3">Mytv Help</h1>
-    </br>
-        <p class="text-2xl">We are here to guide you to connect your TV</p>
-    </br>
-     <h2 class="text-3xl font-bold mb-3"></h2>
-     <p class="text-xl"></p>
+    <!-- Header Section -->
+    <header class="bg-success text-white text-center py-5">
+        <h1 class="display-4">Delicious Recipes</h1>
+        <p class="lead">Explore a wide variety of tasty recipes from around the world!</p>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
-    </br>
-    <h3 class="text-4xl font-bold mb-3">Set up with your remote</h3>
-</br>
-    <p class="text-xl">When your TV says, “Quickly set up your TV with your Android phone?” Use your remote to choose Skip.
-    </p>
-    <p class="text-xl">Connect to Wi-Fi. Your system may need time to update.</p>
-    <p class="text-xl">Choose Sign in. Use your remote.</p> 
-</br>
-    <h4 class="text-1xl font-bold mb-2">Prime Video:</h4>
-    <p class="text-xl">Visiting the Amazon sign-in page on a computer or other device that can connect to the internet </p>
-<p class="text-xl">Following the on-screen instructions after your device displays a 5-character registration code </p>
-</br>
-<h5 class="text-1xl font-bold mb-2">Open the app on your TV:</h5>
-<p class="text-xl">Launch the streaming app or service you want to sign into (like Netflix, YouTube, Prime Video, Hulu, etc.) on your TV.</p>
-</br>
-<h6 class="text-1xl font-bold mb-2">Select the option to sign in:</h6>
-<p class="text-xl">You should see an option to "Sign In" or "Login." Choose this option. Depending on the app, you may also see a prompt to "Sign in with a code."</p>
-</br>
-<h7 class="text-1xl font-bold mb-2">Get the code:</h7>   
-<p class="text-xl">Once you select the sign-in option, the app will display a code on your TV screen (usually a series of numbers or letters). This is the unique code you'll use to log in.</p>    
-</br>
-<h8 class="text-1xl font-bold mb-2">Go to the website:</h8>
-<p class="text-xl">On your computer, phone, or tablet, open a web browser and go to the sign-in page for the service. This is usually something like www.netflix.com/activate, www.youtube.com/activate, or the equivalent for the service you're using.</p>
-</br>
-<h8 class="text-1xl font-bold mb-2">Enter the code:</h8>
-<p class="text-xl">On the website, you'll be prompted to enter the code you see on your TV screen. Enter it exactly as shown.</p>
-</br>
-<h9 class="text-1xl font-bold mb-2">Sign in to your account:</h9>
-<p class="text-xl">After entering the code, you may be asked to sign in to your account by providing your username/email and password.</p>
-<p class="text-xl">Once you're signed in, the app on your TV will automatically update, and you'll be logged in.</p>
-</br>
-<h10 class="text-1xl font-bold mb-2">Enjoy your content!</h10>
-<p class="text-xl">After completing these steps, you should be able to start streaming content on your TV.</p>
-<!-- Contact Form Section -->
-        <section class="bg-white shadow-lg rounded-lg p-8 mb-10">
-            <p class="text-xl">"</p>
-        <p class="text-xl"></p>
-        <p class="text-xl"></p>
-        </br>
-        <h11 class="text-4xl font-bold mb-4">Troubleshooting Tips:</h11>  
-    </br>    
-<p class="text-2xl">*Code Expired: If the code expires before you enter it, simply go back to the TV screen and you’ll see a new code.</p>
-        <p class="text-2xl">*Incorrect Code: If the code doesn’t work, ensure you’ve entered it exactly as shown (case-sensitive and no extra spaces). Make sure you’re on the right activation page for the specific service.</p>
-        <p class="text-2xl">*Multiple TVs: Some services allow you to sign in to more than one device (TV, tablet, etc.). However, there may be limits on the number of devices that can be logged in simultaneously, especially for premium services.</p>
-        <p class="text-2xl">*Account Issues: If you’re having trouble signing in, make sure your account is active and that you’re using the correct login credentials. You might also want to reset your password if</p>
-        <!-- FAQ Section -->
-        <section class="bg-white shadow-lg rounded-lg p-8">
-            
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    
-    <!-- Footer Section -->
-    <footer class="bg-pink-600 text-white text-center py-6">
-        <p>&copy; This is Only use For TV</p>
-        <div class="flex justify-center space-x-6 mt-4">
-            
+    <!-- Main Content Section -->
+    <main class="container mt-5 main-content">
+        <!-- Featured Recipes Section -->
+        <div class="text-center mb-5">
+            <h2 class="h3 font-weight-bold section-title">Featured Recipes</h2>
+            <p>Discover our most popular and delicious recipes that you can cook at home!</p>
         </div>
+
+        <div id="recipe-list" class="row">
+            <!-- Recipe cards will be inserted here by JavaScript -->
+        </div>
+
+        <!-- About Us Section -->
+        <div class="text-center mt-5">
+            <h2 class="h3 font-weight-bold section-title">About Us</h2>
+            <p>At Delicious Recipes, we believe food is not just about eating, it’s about enjoying and creating memories. Our team of passionate cooks and food enthusiasts curate the best recipes to inspire you in the kitchen. Whether you’re a beginner or an expert, we provide simple, flavorful recipes that anyone can cook and enjoy.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="text-center mt-5">
+            <h2 class="h3 font-weight-bold section-title">Contact Us</h2>
+            <p>If you have any questions or suggestions, feel free to reach out to us!</p>
+            <p><strong>Email:</strong> contact@anirudhharami121@gmail.com</p>
+            <p><strong>Phone:</strong> +918707074297</p>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-success text-white text-center py-4 mt-5">
+        <p class="footer-text">&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Bootstrap and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script>
-        // Toggle FAQ answers
-        function toggleFAQ(id) {
-            const answer = document.getElementById('faq-' + id);
-            if (answer.style.maxHeight) {
-                answer.style.maxHeight = null; // Close the FAQ
-            } else {
-                answer.style.maxHeight = answer.scrollHeight + "px"; // Open the FAQ
+        const recipes = [
+            {
+                title: "Spaghetti Carbonara",
+                ingredients: ["Spaghetti", "Eggs", "Parmesan cheese", "Pancetta", "Pepper", "Garlic", "Olive oil"],
+                instructions: "Start by cooking the spaghetti according to package instructions. In a bowl, whisk together eggs and grated parmesan cheese. Once the spaghetti is cooked, drain and reserve some pasta water. In a hot pan, cook pancetta until crispy. Add the hot pasta and egg-cheese mixture, stirring quickly to create a creamy sauce. Season with freshly cracked black pepper to taste, and serve immediately.",
+                description: "Spaghetti Carbonara is a quintessential Roman dish that's beloved for its rich and creamy texture. Combining crispy pancetta, a velvety egg and cheese sauce, and perfectly al dente pasta, it creates a simple yet indulgent meal. This dish is perfect for any occasion, whether it's a quick weeknight dinner or a special meal with friends and family.",
+                tips: "For a richer taste, try adding a bit of garlic when cooking the pancetta. You can also use Pecorino Romano instead of Parmesan for a more authentic flavor."
+            },
+            {
+                title: "Tacos",
+                ingredients: ["Taco shells", "Ground beef", "Cheese", "Lettuce", "Tomato", "Onion", "Sour cream", "Salsa", "Cilantro"],
+                instructions: "Brown the ground beef in a pan and season with taco seasoning. While the beef is cooking, prepare your taco shells and toppings. Fill each taco shell with the cooked beef, then top with shredded cheese, fresh lettuce, diced tomatoes, onions, a dollop of sour cream, salsa, and cilantro. Serve with lime wedges on the side.",
+                description: "Tacos are a vibrant and flavorful Mexican dish that can be customized to your taste. With a crispy shell filled with savory ground beef, fresh veggies, and rich toppings, tacos are a crowd-pleasing meal that everyone will love. Perfect for gatherings, family meals, or a quick weeknight dinner!",
+                tips: "You can use ground chicken, turkey, or even beans for a vegetarian version. Don't forget to add a squeeze of fresh lime for an extra burst of flavor."
+            },
+            {
+                title: "Caesar Salad",
+                ingredients: ["Romaine lettuce", "Caesar dressing", "Croutons", "Parmesan cheese", "Lemon", "Anchovies (optional)", "Black pepper"],
+                instructions: "Start by tearing the romaine lettuce into bite-sized pieces and placing it in a large salad bowl. Toss the lettuce with Caesar dressing, ensuring it's well-coated. Add crunchy croutons and sprinkle with freshly grated Parmesan cheese. Optionally, top with anchovies for extra umami. Season with black pepper to taste, and garnish with a wedge of lemon.",
+                description: "The Caesar Salad is a timeless classic that's both refreshing and satisfying. With its crunchy lettuce, creamy dressing, and sharp Parmesan, it’s the perfect side dish to accompany any main course or can be enjoyed on its own. Add anchovies for an authentic taste or customize it with your favorite toppings!",
+                tips: "For a healthier version, use a lighter dressing or make your own Caesar dressing using Greek yogurt instead of mayonnaise."
             }
+        ];
+
+        function displayRecipes() {
+            const recipeList = document.getElementById('recipe-list');
+            recipes.forEach(recipe => {
+                const recipeCard = document.createElement('div');
+                recipeCard.className = "col-md-4 recipe-card";
+                recipeCard.innerHTML = `
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">${recipe.title}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ingredients:</h6>
+                            <ul class="list-unstyled">
+                                ${recipe.ingredients.map(ingredient => `<li><i class="fas fa-check-circle"></i> ${ingredient}</li>`).join('')}
+                            </ul>
+                            <h6 class="card-subtitle mb-2 text-muted">Instructions:</h6>
+                            <p>${recipe.instructions}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Description:</h6>
+                            <p class="recipe-description">${recipe.description}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Cooking Tips:</h6>
+                            <p><i class="fas fa-lightbulb"></i> ${recipe.tips}</p>
+                        </div>
+                    </div>
+                `;
+                recipeList.appendChild(recipeCard);
+            });
         }
 
-        
+        // Call the function to display recipes on page load
+        displayRecipes();
     </script>
 
 </body>

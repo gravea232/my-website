@@ -4,134 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Recipe Website</title>
-    <!-- Bootstrap 4 CDN -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .recipe-card {
-            margin-bottom: 30px;
-        }
-        .recipe-description {
-            color: #555;
-            font-style: italic;
-        }
-        .card-title {
-            color: #007bff;
-        }
-        .footer-text {
-            color: #fff;
-        }
-        .main-content {
-            padding-top: 30px;
-        }
-        .section-title {
-            margin-bottom: 20px;
-        }
+        /* Optional custom styles */
     </style>
 </head>
-<body>
-
-    <!-- Header Section -->
-    <header class="bg-success text-white text-center py-5">
-        <h1 class="display-4">Delicious Recipes</h1>
-        <p class="lead">Explore a wide variety of tasty recipes from around the world!</p>
+<body class="bg-gray-100">
+    <header class="bg-green-600 p-5 text-white text-center">
+        <h1 class="text-3xl">Delicious Recipes</h1>
     </header>
-
-    <!-- Main Content Section -->
-    <main class="container mt-5 main-content">
-        <!-- Featured Recipes Section -->
-        <div class="text-center mb-5">
-            <h2 class="h3 font-weight-bold section-title">Featured Recipes</h2>
-            <p>Discover our most popular and delicious recipes that you can cook at home!</p>
-        </div>
-
-        <div id="recipe-list" class="row">
-            <!-- Recipe cards will be inserted here by JavaScript -->
-        </div>
-
-        <!-- About Us Section -->
-        <div class="text-center mt-5">
-            <h2 class="h3 font-weight-bold section-title">About Us</h2>
-            <p>At Delicious Recipes, we believe food is not just about eating, it’s about enjoying and creating memories. Our team of passionate cooks and food enthusiasts curate the best recipes to inspire you in the kitchen. Whether you’re a beginner or an expert, we provide simple, flavorful recipes that anyone can cook and enjoy.</p>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="text-center mt-5">
-            <h2 class="h3 font-weight-bold section-title">Contact Us</h2>
-            <p>If you have any questions or suggestions, feel free to reach out to us!</p>
-            <p><strong>Email:</strong> contact@anirudhharami121@gmail.com</p>
-            <p><strong>Phone:</strong> +918707074297</p>
-        </div>
-
+    
+    <main class="p-5">
+        <section id="recipes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Recipe Cards will be generated here -->
+        </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-success text-white text-center py-4 mt-5">
-        <p class="footer-text">&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
+    <footer class="bg-green-600 p-5 text-white text-center">
+        <p>&copy; 2024 Delicious Recipes</p>
     </footer>
-
-    <!-- Bootstrap and Custom JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         const recipes = [
             {
                 title: "Spaghetti Carbonara",
-                ingredients: ["Spaghetti", "Eggs", "Parmesan cheese", "Pancetta", "Pepper", "Garlic", "Olive oil"],
-                instructions: "Start by cooking the spaghetti according to package instructions. In a bowl, whisk together eggs and grated parmesan cheese. Once the spaghetti is cooked, drain and reserve some pasta water. In a hot pan, cook pancetta until crispy. Add the hot pasta and egg-cheese mixture, stirring quickly to create a creamy sauce. Season with freshly cracked black pepper to taste, and serve immediately.",
-                description: "Spaghetti Carbonara is a quintessential Roman dish that's beloved for its rich and creamy texture. Combining crispy pancetta, a velvety egg and cheese sauce, and perfectly al dente pasta, it creates a simple yet indulgent meal. This dish is perfect for any occasion, whether it's a quick weeknight dinner or a special meal with friends and family.",
-                tips: "For a richer taste, try adding a bit of garlic when cooking the pancetta. You can also use Pecorino Romano instead of Parmesan for a more authentic flavor."
+                ingredients: ["Spaghetti", "Eggs", "Pecorino cheese", "Guanciale", "Black pepper"],
+                instructions: "Cook spaghetti. Fry guanciale. Mix eggs and cheese. Combine all.",
+                image: "https://via.placeholder.com/300"
             },
             {
-                title: "Tacos",
-                ingredients: ["Taco shells", "Ground beef", "Cheese", "Lettuce", "Tomato", "Onion", "Sour cream", "Salsa", "Cilantro"],
-                instructions: "Brown the ground beef in a pan and season with taco seasoning. While the beef is cooking, prepare your taco shells and toppings. Fill each taco shell with the cooked beef, then top with shredded cheese, fresh lettuce, diced tomatoes, onions, a dollop of sour cream, salsa, and cilantro. Serve with lime wedges on the side.",
-                description: "Tacos are a vibrant and flavorful Mexican dish that can be customized to your taste. With a crispy shell filled with savory ground beef, fresh veggies, and rich toppings, tacos are a crowd-pleasing meal that everyone will love. Perfect for gatherings, family meals, or a quick weeknight dinner!",
-                tips: "You can use ground chicken, turkey, or even beans for a vegetarian version. Don't forget to add a squeeze of fresh lime for an extra burst of flavor."
+                title: "Chicken Curry",
+                ingredients: ["Chicken", "Curry powder", "Coconut milk", "Onions", "Garlic"],
+                instructions: "Sauté onions and garlic. Add chicken and curry. Pour in coconut milk.",
+                image: "https://via.placeholder.com/300"
             },
-            {
-                title: "Caesar Salad",
-                ingredients: ["Romaine lettuce", "Caesar dressing", "Croutons", "Parmesan cheese", "Lemon", "Anchovies (optional)", "Black pepper"],
-                instructions: "Start by tearing the romaine lettuce into bite-sized pieces and placing it in a large salad bowl. Toss the lettuce with Caesar dressing, ensuring it's well-coated. Add crunchy croutons and sprinkle with freshly grated Parmesan cheese. Optionally, top with anchovies for extra umami. Season with black pepper to taste, and garnish with a wedge of lemon.",
-                description: "The Caesar Salad is a timeless classic that's both refreshing and satisfying. With its crunchy lettuce, creamy dressing, and sharp Parmesan, it’s the perfect side dish to accompany any main course or can be enjoyed on its own. Add anchovies for an authentic taste or customize it with your favorite toppings!",
-                tips: "For a healthier version, use a lighter dressing or make your own Caesar dressing using Greek yogurt instead of mayonnaise."
-            }
+            // Add more recipes as needed
         ];
 
-        function displayRecipes() {
-            const recipeList = document.getElementById('recipe-list');
-            recipes.forEach(recipe => {
-                const recipeCard = document.createElement('div');
-                recipeCard.className = "col-md-4 recipe-card";
-                recipeCard.innerHTML = `
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">${recipe.title}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Ingredients:</h6>
-                            <ul class="list-unstyled">
-                                ${recipe.ingredients.map(ingredient => `<li><i class="fas fa-check-circle"></i> ${ingredient}</li>`).join('')}
-                            </ul>
-                            <h6 class="card-subtitle mb-2 text-muted">Instructions:</h6>
-                            <p>${recipe.instructions}</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Description:</h6>
-                            <p class="recipe-description">${recipe.description}</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Cooking Tips:</h6>
-                            <p><i class="fas fa-lightbulb"></i> ${recipe.tips}</p>
-                        </div>
-                    </div>
-                `;
-                recipeList.appendChild(recipeCard);
-            });
-        }
+        const recipeContainer = document.getElementById('recipes');
 
-        // Call the function to display recipes on page load
-        displayRecipes();
+        recipes.forEach(recipe => {
+            const card = document.createElement('div');
+            card.className = "bg-white rounded-lg shadow-lg p-5";
+
+            card.innerHTML = `
+                <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-48 object-cover rounded-t-lg">
+                <h2 class="text-xl font-bold mt-2">${recipe.title}</h2>
+                <h3 class="text-lg font-semibold">Ingredients:</h3>
+                <ul class="list-disc pl-5">
+                    ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                </ul>
+                <h3 class="text-lg font-semibold mt-2">Instructions:</h3>
+                <p>${recipe.instructions}</p>
+            `;
+
+            recipeContainer.appendChild(card);
+        });
     </script>
-
 </body>
 </html>
